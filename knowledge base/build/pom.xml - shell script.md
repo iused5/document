@@ -2,22 +2,22 @@
 ## after_deploy.sh
 ```bash
 export remoteDir=/app/domains
-wasId='REAL181'
-cd $remoteDir/tices
+wasId='REAL1'
+cd $remoteDir/my
 echo '###################' $wasId 'Server Start        ####################'
-./startTices.sh
-echo '###################' $wasId 'Sever Start End     ####################'
+./startmy.sh
+echo '###################' $wasId 'Server Start End    ####################'
 ```
 ## before_deploy.sh
 ```bash
 #!/bin/sh
-wasId='REAL181'
+wasId='REAL1'
 echo '####################' $wasId 'War File Delete....  ####################'
-rm -rf ./tices.war
+rm -rf ./my.war
 echo '####################' $wasId 'Server Stop          ####################'
 export remoteDir=/app/domains
-cd $remoteDir/tices
-./stopTices.sh
+cd $remoteDir/my
+./stopmy.sh
 echo '####################' $wasId 'Server Stop End      ####################'
 ```
 ## pom.xml
@@ -26,12 +26,12 @@ echo '####################' $wasId 'Server Stop End      ####################'
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     
-    <groupId>com.kt</groupId>
-    <artifactId>TICES</artifactId>
+    <groupId>com.my</groupId>
+    <artifactId>my</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     
-    <name>TICES</name>
+    <name>my</name>
     
     <properties>
         <java-version>1.6</java-version>
@@ -80,20 +80,19 @@ echo '####################' $wasId 'Server Stop End      ####################'
     <profiles>
         <!--  DEV Server Information Setting  -->
         <profile>
-            <id>dev109</id>
+            <id>dev1</id>
             <properties>
-                <target-host>아이피</target-host>
-                <target-command-path>/app/apps/tices</target-command-path>
-                <target-remotedir>/app/apps/tices</target-remotedir>
-                <target-username>아이디</target-username>
-                <target-password>암호</target-password>
-                <!-- <target-fileset>D:/ktProject/TICES/target</target-fileset> -->
-                <target-fileset>/home/hudson/.jenkins/workspace/TICES_DEV_WAS01_10.217.52.109/TICES/target</target-fileset>
-                <target-jbossHome>/app/domains/tices</target-jbossHome>
+                <target-host>127.0.0.1</target-host>
+                <target-command-path>/app/apps/my</target-command-path>
+                <target-remotedir>/app/apps/my</target-remotedir>
+                <target-username>myid</target-username>
+                <target-password>mypwd</target-password>
+                <target-fileset>/home/hudson/.jenkins/workspace/MY_DEV_WAS1_127.0.0.1/my/target</target-fileset>
+                <target-jbossHome>/app/domains/my</target-jbossHome>
                 <target-port>8180</target-port>
-                <target-deploy-path>/app/apps/tices/tices.war</target-deploy-path>
-                <target-serverName>tices</target-serverName>
-                <target-serverId>tices</target-serverId>
+                <target-deploy-path>/app/apps/my/my.war</target-deploy-path>
+                <target-serverName>my</target-serverName>
+                <target-serverId>my</target-serverId>
             </properties>
         </profile>
     
@@ -130,7 +129,7 @@ echo '####################' $wasId 'Server Stop End      ####################'
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.1.1</version>
                 <configuration>
-                    <warName>tices</warName>
+                    <warName>my</warName>
                 </configuration>
             </plugin>
             <plugin>
@@ -235,14 +234,14 @@ echo '####################' $wasId 'Server Stop End      ####################'
     <distributionManagement>
         <repository>
             <id>nexus</id>
-            <name>Tices Repository</name>
-            <url>http://10.217.52.113:8080/nexus/content/groups/tices_group/
+            <name>My Repository</name>
+            <url>http://127.0.0.1:8080/nexus/content/groups/my_group/
             </url>
         </repository>
-    <!-- <snapshotRepository> 
+        <!-- <snapshotRepository> 
             <id>snapshot</id> 
             <name>Snapshot Repository</name> 
-            <url>http://10.217.52.64:8080/nexus/content/repositories/snapshots</url> 
+            <url>http://127.0.0.1:8080/nexus/content/repositories/snapshots</url> 
         </snapshotRepository> -->
     </distributionManagement>
 </project>
@@ -257,14 +256,14 @@ echo '####################' $wasId 'Server Stop End      ####################'
     <servers>
     <server>
         <id>tices</id>
-        <username>아이디</username>
-        <password>암호</password>
+        <username>myid</username>
+        <password>mypwd</password>
     </server>
     <!-- 
     <server>
     <id>nexus</id>
-    <username>tices</username>
-    <password>tices</password>
+    <username>myid</username>
+    <password>mypwd</password>
     </server>
     -->
     </servers>
@@ -272,7 +271,7 @@ echo '####################' $wasId 'Server Stop End      ####################'
     <mirror>
         <id>nexus</id>
         <mirrorOf>central</mirrorOf>
-        <url>http://10.217.52.113:8080/nexus/content/groups/tices_group/</url>
+        <url>http://127.0.0.1:8080/nexus/content/groups/my_group/</url>
     </mirror>
     </mirrors>
 </settings>
