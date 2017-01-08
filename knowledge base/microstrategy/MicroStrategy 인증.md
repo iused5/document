@@ -27,6 +27,14 @@ login page에서 evt 파라메터를 3054로 지정할 경우, Server,Project �
 ## ESM 참고자료
 * MSDL - Home > Web SDK > Customizing MicroStrategy Web > Part II: Advanced Customization Topics > Customizing Authentication > Creating a Custom External Security Module (ESM) > ExternalSecurity Interface
 
+## ESM에서 HttpServletRequest, HttpServletResponse 참조
+```java
+public int handleAuthenticationRequest(RequesKeys reqKeys, ContainerServices cntSvcs, int reason) {
+    HttpServletRequest request = ((com.microstrategy.web.app.platform.ServletContainerServices)cntSvcs).getRequest();
+    HttpServletResponse response = ((com.microstrategy.web.app.platform.ServletContainerServices)cntSvcs).getResponse();
+}
+```
+
 ## trusted 인증 예제
 * Tech Support: TN34373
 
