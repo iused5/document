@@ -16,3 +16,23 @@ evt=3010 &src=mstrWeb.3010&Project=EDW&loginReq=true&Port=0&Server=LGDAMRP1&mstr
 ```text
 evt=3019&src=mstrWeb.3019&mstrWeb=-LGDAMRP1.EDW.0_&desktop=*-1.*-1.0.0.0&preferences=*-1.*-1.0.0.user.general..1.
 ```
+
+## Login시 주의사항
+login page에서 evt 파라메터를 3054로 지정할 경우, Server,Project 파라메터는 지정할 수 없다.  
+실제로 Server,Project는 Project Content page에서 Project를 선택할 시점에 설정되는 것으로 파악되고, 실제로 DeskTop에서 사용자연결을 확인한 결과
+이 시점에 세션이 생성되기도 한다.  
+문제점은 세션에 대한 타임아웃이 발생했을때, 재로그인이 허용되지 않는다는 것이다.  
+하지만 session.invalidate를 수행하면 강제로 세션이 제거되기 때문에 새로운 접속이 가능하다.
+
+## ESM 참고자료
+* MSDL - Home > Web SDK > Customizing MicroStrategy Web > Part II: Advanced Customization Topics > Customizing Authentication > Creating a Custom External Security Module (ESM) > ExternalSecurity Interface
+
+## trusted 인증 예제
+* Tech Support: TN34373
+
+## 타 도메인에서 MSTR웹을 호출시 인증 화면이 계속 표시될 경우
+* Tech Support: TN31278
+
+## AuthMode를 LDAP으로 설정한 후 빈 패스워드로 Session 연결이 성공할 경우
+* Tech Support: TN7775
+* Tech Support: TN12791
