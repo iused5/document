@@ -1,4 +1,5 @@
 # Node.js - Oracle - Windows 7
+## 2017 . 03 . 19
 ## 참조 링크
 https://www.bountysource.com/issues/36391290-unable-to-install-node-oracledb-on-windows-10
 https://github.com/oracle/node-oracledb/blob/master/INSTALL.md#instwin
@@ -63,7 +64,6 @@ npm WARN node-oracledb No repository field.
 npm WARN node-oracledb No README data
 npm WARN node-oracledb No license field.
 ```
-## 설치 내용
-* Python 2.7.11
-* Microsoft Visual C++ Build Tools 14.0.25420.1
+* 설치 결과
+  * Python 2.7.11, Microsoft Visual C++ Build Tools 14.0.25420.1
 
