@@ -10,6 +10,7 @@ https://community.oracle.com/docs/DOC-931127
 
 ## 2차 시도
 * Visual Studio 2015, Python 2.17.11 Uninstall
+* 참조 링크를 기준으로 Microsoft Visual C++ 20XX Redistributable - x86(x64) 설치 상태 유지
 * Open an elevated CMD prompt (run as Administrator).  
 * Navigate to your app folder
 ```console
