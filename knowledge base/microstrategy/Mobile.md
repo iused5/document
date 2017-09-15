@@ -2,5 +2,3 @@
 [KB44322: How to Customize Authentication for Mobile Applications using the MicroStrategy Mobile SDK 9.3.x and 9.4.x.][1]
 
 [1]: https://community.microstrategy.com/s/article/ka1440000009HS8AAM/KB44322-How-to-Customize-Authentication-for-Mobile-Applications
-
-[KB44322: How to Customize Authentication for Mobile Applications using the MicroStrategy Mobile SDK 9.3.x and 9.4.x.](https://community.microstrategy.com/s/article/ka1440000009HS8AAM/KB44322-How-to-Customize-Authentication-for-Mobile-Applications "title" target="_blank")
