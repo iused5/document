@@ -112,3 +112,8 @@ public static void jobClose(WebReportInstance wrb) {
 ## 리포트에 행데이터를 이용한 URL링크 표시
 * MSTR API: ReportGridCellMetricValueImpl
 * TN31309: How to Display the Metric Value as a Tooltip when the Metric Cell is Showing a Threshold Image using the MicroStrategy Java Web SDK 9.2.x and 9.3.x 
+
+## API를 이용한 도큐먼트와 Visual Insight (dossier) 의 구별
+* How do I differentiate between a dossier and a document with the data I get from the rest API?
+* 도큐먼트 - WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DssXmlViewMediaViewStatic
+* Visual Insight - WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DSSXmlViewMediaHTML5Dashboard
