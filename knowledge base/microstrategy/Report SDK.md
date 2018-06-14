@@ -115,5 +115,9 @@ public static void jobClose(WebReportInstance wrb) {
 
 ## API를 이용한 도큐먼트와 Visual Insight (dossier) 의 구별
 * How do I differentiate between a dossier and a document with the data I get from the rest API?
-* 도큐먼트 - WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DssXmlViewMediaViewStatic
-* Visual Insight - WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DSSXmlViewMediaHTML5Dashboard
+
+구분 | 비교식
+--- | --- 
+도큐먼트 | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DssXmlViewMediaViewStatic
+Visual Insight | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DSSXmlViewMediaHTML5Dashboard
+

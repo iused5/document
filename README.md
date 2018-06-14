@@ -7,7 +7,7 @@
 ## [java](https://github.com/iused5/document/tree/master/knowledge%20base/java)
 ## [javascript](https://github.com/iused5/document/tree/master/knowledge%20base/javascript)
 ## [microstrategy](https://github.com/iused5/document/tree/master/knowledge%20base/microstrategy)
-## [mode.js](https://github.com/iused5/document/tree/master/knowledge%20base/node.js)
+## [node.js](https://github.com/iused5/document/tree/master/knowledge%20base/node.js)
 ## [regex](https://github.com/iused5/document/tree/master/knowledge%20base/regex)
 ## [spring](https://github.com/iused5/document/tree/master/knowledge%20base/spring)
 ## [vbscript, VBA](https://github.com/iused5/document/tree/master/knowledge%20base/vbscript%2C%20VBA)

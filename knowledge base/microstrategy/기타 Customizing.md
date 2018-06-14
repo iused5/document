@@ -57,3 +57,6 @@
 
 ## 로그아웃 버튼 관리자에게만 표시
 * How to hide the logout link from non-administrators with the MicroStrategy Web SDK 10.9
+
+## SDK를 이용하여 프롬프트 정보 조회 시 캐쉬 초기화
+* '개체 캐쉬'를 삭제하여 프롬프트 캐쉬 정보 초기화
