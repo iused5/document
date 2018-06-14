@@ -54,3 +54,6 @@
 ## 사용내역분석
 * TN16124 - What are the corresponding statistics tables for each module in statistics configuration for MicroStrategy Intelligence Server 8.x ?
 * TN20537 - New feature in MicroStrategy Enterprise Manager 9.0: Ability to log Statistics on prompt answers used during report execution.
+
+## 로그아웃 버튼 관리자에게만 표시
+* How to hide the logout link from non-administrators with the MicroStrategy Web SDK 10.9
