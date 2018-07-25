@@ -121,3 +121,17 @@ public static void jobClose(WebReportInstance wrb) {
 도큐먼트 | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DssXmlViewMediaViewStatic
 Visual Insight | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DSSXmlViewMediaHTML5Dashboard
 
+## 도큐먼트에서 그리드 컬럼 Drag 방지
+* 커스터마이징 OIVM_Content_Core.jsp
+```html
+...
+<script type="text/javascript">
+    jQuery(funcction() {
+        // 도큐먼트가 iframe 내에서 실행될 경우, 부모윈도우의 view-type 속성을 참조한다.
+        if ($(parent.document.body).attr("view-type") == "maindashboard") {
+            mstrmojo.dnd.startDrag = function(x,a) { return; }
+        }
+    });
+</script>
+...
+```
