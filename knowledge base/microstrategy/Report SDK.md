@@ -122,6 +122,7 @@ public static void jobClose(WebReportInstance wrb) {
 Visual Insight | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DSSXmlViewMediaHTML5Dashboard
 
 ## 도큐먼트에서 그리드 컬럼 Drag 방지
+* ver 10.11
 * 커스터마이징 OIVM_Content_Core.jsp
 ```html
 ...
@@ -134,4 +135,24 @@ Visual Insight | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDS
     });
 </script>
 ...
+```
+## 리포트 컬럼 Resize, Drag 방지, 마우스 동작 방지
+* ver 10.11
+* bone-report.js 의 내용을 커스터마이징
+```javascript
+// Drag 이벤트 핸들러를 재지정
+mstrGridReport.prototype.ondragstart = function(H) { return; }
+// 컬럼 Resize 이벤트 핸들러를 재지정
+mstrGridReport.prototype.onresizestart = function(B) { return; }
+// 마우스 동작 방지
+mstrGridReport.prototype.onmousedown = function() { return; }
+```
+* mstr.css 의 내용을 커스터마이징
+```css
+/* Drag 시 커서를 일반상태의 커서로 변환 */
+.mstrColWidthHandle { custor: auto; }
+```
+* bone-global.js 의 내용을 커스터마이징
+```javascript
+function rightClick(D) { return; }
 ```
