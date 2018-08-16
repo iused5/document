@@ -22,3 +22,14 @@ TN:34692 - How to use URL API to answer the prompts of a report and export to ex
 
 ## Export 시 response의 content-type 설정
 * WEB-INF/xml/config/exportFormat.xml의 내용에 force-download="true" 엘리먼트를 추가함
+
+## Export 시 response의 content-type 설정 (PDF) - 추가 검토 진행 중
+* PDF의 경우 (10.4 기준) content-type이 'application/pdf'로 java 소스에 하드코딩됨
+#### 기술 검토 내용  
+* WEB-INF/lib 하위 *.jar decompile 후 application/pdf로 문자열 검색 결과
+1. com.microstrategy.web.app.tasks.ExportDocumentTask (exportDocument.xml에 설정)  
+1. com.microstrategy.web.app.tasks.ExportReportTask (exportReport.xml에 설정)  
+1. com.microstrategy.web.app.utils.ExportBeanHelper  
+1. com.microstrategy.web.app.transforms.PDFTransform (styleCatalog.xml에 설정)   
+1. com.microstrategy.web.app.transforms.RWPDFTransform
+* 'application/download'로 변경 한 클래스 생성, 설정 적용 후 테스트 진행 예정
