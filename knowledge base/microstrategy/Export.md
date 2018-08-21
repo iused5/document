@@ -27,16 +27,16 @@ TN:34692 - How to use URL API to answer the prompts of a report and export to ex
 * PDF의 경우 (10.4 기준) content-type이 'application/pdf'로 java 소스에 하드코딩됨
 #### 기술 검토 내용  
 * WEB-INF/lib 하위 *.jar decompile 후 application/pdf로 문자열 검색 결과
-1. com.microstrategy.web.app.tasks.ExportDocumentTask (exportDocument.xml에 설정)  
-1. com.microstrategy.web.app.tasks.ExportReportTask (exportReport.xml에 설정)  
-1. com.microstrategy.web.app.utils.ExportBeanHelper  
-1. com.microstrategy.web.app.transforms.PDFTransform (styleCatalog.xml에 설정)   
-1. com.microstrategy.web.app.transforms.RWPDFTransform
-* 'application/download'로 변경 한 클래스 생성, 설정 적용 후 테스트 진행 예정
+  * com.microstrategy.web.app.tasks.ExportDocumentTask (exportDocument.xml에 설정)  
+  * com.microstrategy.web.app.tasks.ExportReportTask (exportReport.xml에 설정)  
+  * com.microstrategy.web.app.utils.ExportBeanHelper  
+  * com.microstrategy.web.app.transforms.PDFTransform (styleCatalog.xml에 설정)   
+  * com.microstrategy.web.app.transforms.RWPDFTransform
+* 코드 상에서 'application/download'로 변경 한 클래스 생성, 설정 적용 후 테스트 진행 예정
 
 ## Export 시 최대 셀수 한도 변경
 * '프로젝트 기본 값' > '리포트 내보내기' 설정 페이지에서 '일반 텍스트로 내보내기 할 최대 cell의 수', '포멧을 적용하여 HTML 및 Excel로 내보내려는 최대 셀 수' 항목의 최대 한도 변경
-* sys_definiitions.xml의 다음 항목 변경
+* <sys_definiitions.xml>의 다음 항목 변경
 ```xml
 <pr ... n="exportMaxCellsPlainText" mx="9999999"/><!-- mx 항목의 값 변경 -->
 ...
