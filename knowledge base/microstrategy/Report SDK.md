@@ -32,6 +32,34 @@ public static void jobClose(WebReportInstance wrb) {
 }
 ```
 
+## 디자인 모드 기본선택탭을 Object Browser로 설정
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<framework desc="This is the framework definition xml for mstr Web application" name="mstrFramework" version="1.0">
+    ...
+    <pages>
+        ...
+        <page ... name="report">
+            <templates>
+            ...
+            </templates>
+            <web-beans>
+                <web-bean name="frame" persist-mode="2" sys-bean="ReportFrameBean">
+                    <init-properties>
+                        <property name="defaultTabNameReportDesign" source="const" type="string" value="objectBrowser" />
+                    </init-properties>
+                    ...
+                </web-bean>
+                ...    
+            </web-beans>              
+        </page>
+        ...
+    </pages>    
+    ...
+</framework>
+```
+
+
 ## How to create a standard report toolbar button that will open a new customized browser window and pass report state information to the new page in MicroStrategy Web 8.x.x
 * Tech Support - TN12188
 
