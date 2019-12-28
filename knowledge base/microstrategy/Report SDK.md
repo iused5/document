@@ -58,7 +58,8 @@ public static void jobClose(WebReportInstance wrb) {
     ...
 </framework>
 ```
-
+## "All Objects" Browser에서 표시 항목 삭제
+* KB248772: How To Remove A Shortcut From The “All Objects” Browser On A Report Using MicroStrategy Web SDK 9.4.1-10
 
 ## How to create a standard report toolbar button that will open a new customized browser window and pass report state information to the new page in MicroStrategy Web 8.x.x
 * Tech Support - TN12188

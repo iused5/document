@@ -1,12 +1,13 @@
-# document
-
+## [microstrategy](https://github.com/iused5/document/tree/master/knowledge%20base/microstrategy)
+* [내보내기](https://github.com/iused5/document/tree/master/knowledge%20base/microstrategy/Export.md)
+* [RIA환경에서 자바스크립트을 이용한 세션유지](https://github.com/iused5/document/tree/master/knowledge%20base/microstrategy/Export%EC%99%80%20Session.md)
+* [JBoss에 배포](https://github.com/iused5/document/blob/master/knowledge%20base/microstrategy/JBoss%EC%97%90%20%EC%84%A4%EC%B9%98.md)
 ## [android](https://github.com/iused5/document/tree/master/knowledge%20base/android)  
 ## [build](https://github.com/iused5/document/tree/master/knowledge%20base/build)
 ## [c](https://github.com/iused5/document/tree/master/knowledge%20base/c)
 ## [css](https://github.com/iused5/document/tree/master/knowledge%20base/css)
 ## [java](https://github.com/iused5/document/tree/master/knowledge%20base/java)
 ## [javascript](https://github.com/iused5/document/tree/master/knowledge%20base/javascript)
-## [microstrategy](https://github.com/iused5/document/tree/master/knowledge%20base/microstrategy)
 ## [node.js](https://github.com/iused5/document/tree/master/knowledge%20base/node.js)
 ## [regex](https://github.com/iused5/document/tree/master/knowledge%20base/regex)
 ## [spring](https://github.com/iused5/document/tree/master/knowledge%20base/spring)
