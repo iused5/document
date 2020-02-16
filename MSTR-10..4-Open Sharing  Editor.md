@@ -16,3 +16,9 @@ ShowSharingEditor: function X() { // line:251672
 ...
 ```
 * mstrmojo.all["mstr44"]를 evaluate 시 this와 동일결과 확인 
+* mstrmojo.all["mstr44"].ShowSharingEditor({})
+##### 테스트케이스
+* 프리젠테이션모드에서 사용 가눙  
+* 디자인모드에서 사용 가능  
+* Viewer 권한 사용자 프리젠테이션/디자인 모드 사용 가능
+* 굥유기능에 의해 표시된 URL로 접속 후 프리젠테이션/디자인 모드에서 사용 가능
