@@ -3,6 +3,7 @@
 257(line)  
 ```css
 handleEvent: function (e) {  
-    switch (e.type) {
+    switch (e.type) { // e.type == "mousedown", 
+
     ...        
 ```    
