@@ -27,3 +27,14 @@
 
 ## SDK를 이용하여 프롬프트 정보 조회 시 캐쉬 초기화
 * '개체 캐쉬'를 삭제하여 프롬프트 캐쉬 정보 초기화
+
+## 인증 시 시간 소요 현상 대응
+* How to disable reverse DNS lookup for MicroStrategy Web
+* https://community.microstrategy.com/s/article/KB44758-How-to-disable-reverse-DNS-look-up-for-MicroStrategy-Web?
+language=en_US
+* https://community.microstrategy.com/s/article/KB40984-How-to-disable-DNS-lookup-on-MicroStrategy-Web?language=undefined
+
+## MSTR 클러스터 환경에서 큐브의 메모리 적재
+* https://community.microstrategy.com/s/article/KB35142-New-feature-in-MicroStrategy-Intelligence-Server-9-0-2?language=en_US
+* https://community.microstrategy.com/s/article/How-do-cubes-and-caches-synchronize-in-a-clustered-environment?language=en_US
+* https://www2.microstrategy.com/producthelp/Current/Library/en-us/Content/Monitoring_and_modifying_Intelligent_Cube_status.htm

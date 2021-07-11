@@ -49,6 +49,7 @@ try {
     WebAppSessionManager sessionManager = mstrPage.getAppContext().getAppSessionManager();
     WebIServerSession activeSession = sessionManager.getActiveSession();
     ...
+    WebIServerSession isession = mstrPage.getWebIServerSession();
 %>
 ```
 

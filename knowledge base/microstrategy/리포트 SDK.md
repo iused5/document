@@ -83,14 +83,6 @@ public static void jobClose(WebReportInstance wrb) {
 * MSTR API: ReportGridCellMetricValueImpl
 * TN31309: How to Display the Metric Value as a Tooltip when the Metric Cell is Showing a Threshold Image using the MicroStrategy Java Web SDK 9.2.x and 9.3.x 
 
-## API를 이용한 도큐먼트와 Visual Insight (dossier) 의 구별
-* How do I differentiate between a dossier and a document with the data I get from the rest API?
-
-구분 | 비교식
---- | --- 
-도큐먼트 | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DssXmlViewMediaViewStatic
-Visual Insight | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDSSXMLViewMedia.DSSXmlViewMediaHTML5Dashboard
-
 ## 도큐먼트에서 그리드 컬럼 Drag 방지
 * ver 10.11
 * 커스터마이징 OIVM_Content_Core.jsp
@@ -128,4 +120,10 @@ mstrGridReport.prototype.onmousedown = function() { return; }
 * bone-global.js 의 내용을 커스터마이징
 ```javascript
 function rightClick(D) { return; }
+```
+
+## MSTR Library 링크 조회
+``` javascript
+mstrmojo.util.LibraryHelper.constructLibraryUrl() // 예시) "http://localhost:8080/MicroStrategyLibrary.2020/app"
+mstrmojo.util.LibraryHelper.createTokenAndOpenLink(libUrl); // libUrl : 1)의 결과 또는 1)의 결과 중 /app 제거 
 ```
