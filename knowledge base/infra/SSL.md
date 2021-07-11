@@ -34,9 +34,9 @@
 | 국가 코드 | KR
 * kview.jks 생성
 * keytool -certreg -keyalg RSA -alias kview -file kview.csr -keystore kview.jks  
--> kview.csr 생성
+결과&gt; kview.csr 생성
 * keytool -export -alias kview -storepass kviewhttps -file kview.cer -keystore kview.jks  
--> kview.cer 생성
+결과&gt; kview.cer 생성
 
 ## OpenSSL 이용
 * set OPENSSL_CONF=...\OpenSSL\bin\openssl.cnf

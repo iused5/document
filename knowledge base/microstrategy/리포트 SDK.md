@@ -1,22 +1,9 @@
-# Report SDK
-## v8에서 사용하던 prompt layout 관련 화일을 v9에서 사용할때
-* MicroStrategy Developer Library 9.0.1 - Maintaining Backwards Compatibility for Every Single Prompt 참고
-
-## Removing Document Scrollbars when Two Sets of Scrollbars are Displayed
-* MicroStrategy Developer Libraray 9.0.1 에서 검색
-
+# 리포트 SDK
 ## 일자 Filter 생성시 selection box의 폭이 너무 좁게 표시되는 경우
 * mstrFilterEditor의 style을 width:100% !important; 로 지정
 
 ## Prompt Detail, Report Detail 표시 방지
 * RW_Contents.jsp, Report_Contents.jsp의 id가 mstrPanelPortrait인 객체의 style.display = "none"으로 javascript에서 처리 (style 반영되지 않음)
-
-## 리포트 실행창의 '리포트 세부 사항', '프롬프트 상세'를 기본적으로 표시하지 않도록 설정
-* /WEB-INF/xml/config/browserSettings.xml에 다음 내용 추가
-```xml
-<browser-setting desc="Show report details" name="reportDetails" value="0"/>
-<browser-setting desc="Show report details" name="promptDetails" value="0"/>
-```
 
 ## Report Bean을 Inbox에서 제거
 생성된 Report Bean으로부터 프롬프트 정보등을 사용한 뒤 inbox로부터 제거
@@ -32,54 +19,8 @@ public static void jobClose(WebReportInstance wrb) {
 }
 ```
 
-## 디자인 모드 기본선택탭을 Object Browser로 설정
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<framework desc="This is the framework definition xml for mstr Web application" name="mstrFramework" version="1.0">
-    ...
-    <pages>
-        ...
-        <page ... name="report">
-            <templates>
-            ...
-            </templates>
-            <web-beans>
-                <web-bean name="frame" persist-mode="2" sys-bean="ReportFrameBean">
-                    <init-properties>
-                        <property name="defaultTabNameReportDesign" source="const" type="string" value="objectBrowser" />
-                    </init-properties>
-                    ...
-                </web-bean>
-                ...    
-            </web-beans>              
-        </page>
-        ...
-    </pages>    
-    ...
-</framework>
-```
-## "All Objects" Browser에서 표시 항목 삭제
-* KB248772: How To Remove A Shortcut From The “All Objects” Browser On A Report Using MicroStrategy Web SDK 9.4.1-10
-
 ## How to create a standard report toolbar button that will open a new customized browser window and pass report state information to the new page in MicroStrategy Web 8.x.x
 * Tech Support - TN12188
-
-## 리포트 실행 결과 화면에서 '관련 리포트' 창 제거
-* MSTR Support - TN:33681 - How to hide the "Related Reports" option from the tools menu of report editor in MicroStrategy Web SDK 9.0.1
-* MSTR Support - TN:34645 - How to hide related reports and all objects buttons from the left-hand side browser pane using SDK in MicroStrategy Web 9.0.1
-
-## 리포트 실행 결과 화면에서 '좌측 보조창(dockLeft)' 제거
-* id가 dockLeft 인 dom element를 찾아 css 중 display none 적용 (메뉴 및 툴바에 표시되는 내용은 별도 처리 필요)
-
-## 리포트 생성 화면에서 'MDX Object' 화면 제거
-* MSTR Support - TN40540: How to disable “MDX Objects” window in a report in MicroStrategy Web 9.2.x?
-
-## Related Report Accordion Button 숨김
-* MSTR Support - TN34645 - How to hide related reports and all objects buttons from the left-hand side browser pane using SDK in MicroStrategy Web 9.0.1
-
-## Related Report Menu 숨김
-* MSTR Support - TN20420 (TN6100-81X-2491) - How to hide "Related Reports" menu item under View in MicroStrategy Web 8.1.X
-* MSTR Support - TN33681 - How to hide the "Related Reports" option from the tools menu of report editor in MicroStrategy Web SDK 9.0.1
 
 ## Report toolbar에서 click event 처리
 * TN36260: How to display a warning message when clicking on the "Insert New Metric"(fx) icon in the report toolbar before the editor is loaded in MicroStrategy Web 9.0.2?
@@ -165,8 +106,9 @@ Visual Insight | WebObjectInfo.getViewMediaSettings().getDefaultMode() == EnumDS
 </script>
 ...
 ```
+
 ## 리포트 컬럼 Resize, Drag 방지, 마우스 동작 방지
-* ver 10.11
+* version 10.11
 * bone-report.js 의 내용을 커스터마이징
 ```javascript
 // Drag 이벤트 핸들러를 재지정
@@ -176,11 +118,13 @@ mstrGridReport.prototype.onresizestart = function(B) { return; }
 // 마우스 동작 방지
 mstrGridReport.prototype.onmousedown = function() { return; }
 ```
+
 * mstr.css 의 내용을 커스터마이징
 ```css
 /* Drag 시 커서를 일반상태의 커서로 변환 */
 .mstrColWidthHandle { custor: auto; }
 ```
+
 * bone-global.js 의 내용을 커스터마이징
 ```javascript
 function rightClick(D) { return; }
