@@ -17,7 +17,7 @@ jQuery.each(mstrmojo.all, function(i, v) { if (v.selectedIndices) { console.log(
 jQuery(".mstrmojo-ui-CheckList").each(function(i, v) { var eid = $(v).attr("id"); console.log("=>", eid, mstrmojo.all[eid].selectedIndices); });
 ```
 
-## Dossier Close 버튼 처리
+## Close 버튼 처리
 1. Configuration 파일 설정
 2. HTML5VI_Content_Core.jsp 의 <web:displayBean beanName="menuBean" /> 을 상단에 하고, close 메뉴정보를 처리한 다음 new mstrmojo.vi.VisualInsightApp(....)의 파라미터로 전달
 * 또는, .mstrmojo-VIBoxPanelContainer-closeBtn { display:none !important; }
